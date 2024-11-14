@@ -4,7 +4,7 @@ class Borrower(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     borrower = db.Column(db.String(100), nullable=False, unique=True)
     email = db.Column(db.String(100), nullable=False, unique=True)
-    phone = db.Column(db.Integer, nullable=False)
+    phone = db.Column(db.String(100), nullable=False)
 
     #Foreign key ke tabel Book
     book_id = db.Column(db.Integer, db.ForeignKey('book.id'), nullable=False)
